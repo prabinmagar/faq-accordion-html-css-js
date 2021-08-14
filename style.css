@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.main-wrapper{
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+.faq-title h1{
+    margin: 3rem 0 2.4rem 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+.faq-content{
+    display: grid;
+    grid-template-columns: 100%;
+    row-gap: 1rem;
+}
+.faq-right-content, .faq-left-content{
+    padding: 1.2rem;
+}
+.faq-left-content{
+    text-align: center;
+}
+.faq-left-content img{
+    width: 75%;
+    display: block;
+    margin: 1rem auto;
+}
+.faq-left-content p{
+    font-weight: 400;
+    opacity: 0.95;
+    max-width: 400px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+.faq-item{
+    margin-bottom: 1rem;
+}
+.faq-item-head{
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+    box-shadow: 0 0 5px 0 rgb(255, 88, 96, 0.5);
+    opacity: 0.85;
+    padding: 0.6rem 1rem;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.faq-item-head:hover{
+    box-shadow: 0 0 15px 0 rgb(255, 88, 96, 0.5);
+}
+.faq-item-icon{
+    cursor: pointer;
+}
+.faq-item-body{
+    overflow: hidden;
+    max-height: 0;
+    background: rgba(255, 88, 96, 0.1);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+.faq-item-body p{
+    font-weight: 300;
+    padding: 1rem;
+}
+.show-para{
+    max-height: 1000px; /* js related */
+}
+
+
+@media screen and (min-width: 800px){
+    .faq-left-content{
+        text-align: left;
+    }
+    .faq-left-content img{
+        margin-left: 0;
+    }
+    .faq-left-content p{
+        margin-left: 0;
+        max-width: 460px;
+    }
+    .faq-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
